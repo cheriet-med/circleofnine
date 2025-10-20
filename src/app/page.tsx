@@ -10,6 +10,21 @@ import { HeroParallax } from "@/components/ui/hero-parallax";
 import { MaskContainer } from "@/components/ui/svg-mask-effect";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { Timeline } from "@/components/ui/timeline";
+import FAQAccordion from '@/components/faq';
+import Appscroll from '@/components/list';
+import { IconCloud } from "@/components/ui/icon-cloud"
+import {
+  ScrollVelocityContainer,
+  ScrollVelocityRow,
+} from "@/components/ui/scroll-based-velocity"
+import {
+  AnimatedSpan,
+  Terminal,
+  TypingAnimation,
+} from "@/components/ui/terminal"
+
+import { Safari } from "@/components/ui/safari"
+
 
 const Hero = dynamic(() => import('@/components/Hero'), {
   ssr: false,
@@ -24,9 +39,45 @@ const Hero = dynamic(() => import('@/components/Hero'), {
   )
 });
 
+
+const slugs = [
+  "typescript",
+  "javascript",
+  "dart",
+  "java",
+  "react",
+  "flutter",
+  "android",
+  "html5",
+  "css3",
+  "nodedotjs",
+  "express",
+  "nextdotjs",
+  "prisma",
+  "amazonaws",
+  "postgresql",
+  "firebase",
+  "nginx",
+  "vercel",
+  "testinglibrary",
+  "jest",
+  "cypress",
+  "docker",
+  "git",
+  "jira",
+  "github",
+  "gitlab",
+  "visualstudiocode",
+  "androidstudio",
+  "sonarqube",
+  "figma",
+]
+
 const Page = () => {
 
-
+ const imagesss = slugs.map(
+    (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`
+  )
 
   return (
     <>
@@ -44,49 +95,151 @@ const Page = () => {
 <div className='overflow-x-hidden'>
 
 
-  <div className="flex bg-[#cbcbcb]  w-full items-center justify-center ">
-      <MaskContainer
-        revealText={
-          <p className="mx-16 text-center text-5xl  lg:text-9xl font-bold uppercase text-[#4c0000] dark:text-white">
-            We build with precision, scalability, and performance in mind.
-          </p>
-        }
-        className="h-[40rem] "
-      >
-        We use world-class frameworks to build {" "} 
-        <span className='text-[#4c0000]'>
-          smooth
-          </span>, 
-          <span className='text-[#cbcbcb]'>
-         fast
-          </span>
-          , and 
-         <span className='text-[#000035]'>
-            future-ready platforms
-          </span>
-          .
-        
-      </MaskContainer>
+
+
+
+ <div className="relative flex w-full  flex-col items-center justify-center overflow-hidden">
+      <ScrollVelocityContainer className="text-5xl font-extrabold tracking-[-0.02em] md:text-9xl  md:leading-[8rem] uppercase text-[#4c0000]">
+        <ScrollVelocityRow baseVelocity={5} direction={1}>
+           We build with precision.
+        </ScrollVelocityRow>
+        <ScrollVelocityRow baseVelocity={5} direction={-1}>
+        scalability, and performance in mind.
+        </ScrollVelocityRow>
+      </ScrollVelocityContainer>
+      <div className="from-background pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r"></div>
+      <div className="from-background pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l"></div>
     </div>
 
-
-
-     <div className="pb-16 flex flex-col antialiased bg-[#cbcbcb] items-center justify-center relative overflow-hidden">
-    <InfiniteMovingCards
-          items={imagess}
-          direction="right"
-          speed="fast"
-          pauseOnHover={true}
-        />
-    </div>
-
-      <div className="mx-auto  bg-[#4c0000] p-2 ring-1 ring-neutral-700/10 dark:bg-neutral-800">
-      <ThreeDMarquee images={images} />
-    </div>
+<div className='mx-4 md:mx-8 lg:mx-16 xl:mx-76 py-16 '>
+   <p className='lg:w-82 w-64  text-[#0b0a0a]  font-roboto lg:text-sm text-xs lg:leading-relaxed leading-tight font-medium'>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+       Our development process is built on the latest technology frameworks to maintain modern standards and best practices.</p>
+<div className='flex justify-center py-12 md:py-6  lg:py-1'> 
+<IconCloud images={imagesss} />
+</div>
+<div className='flex justify-end '> 
+   <p className='lg:w-82 w-64  text-[#0b0a0a] font-roboto lg:text-sm text-xs lg:leading-relaxed leading-tight font-medium'>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        We work across multiple programming languages to develop robust solutions for blockchain, web, and mobile platforms.</p>
+</div>
+</div>
 
 
 
     
+
+
+
+<div className='pb-16 '>
+   
+    <div className="relative flex w-full  flex-col items-center justify-center overflow-hidden">
+    <ScrollVelocityContainer className="text-5xl font-extrabold tracking-[-0.02em] md:text-9xl  md:leading-[8rem] uppercase text-[#ccac00]">
+        <ScrollVelocityRow baseVelocity={5} direction={1}>
+          All your digital needs in one place.
+        </ScrollVelocityRow>
+        
+      </ScrollVelocityContainer>
+        <div className="from-background pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r"></div>
+      <div className="from-background pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l"></div>
+      </div>
+     <Terminal>
+      <TypingAnimation className='text-[#ccac00] text-xl font-bold'>~$ Our Services</TypingAnimation>
+      <TypingAnimation className='text-white md:text-lg'>&gt; After reviewing your idea or project needs, </TypingAnimation>
+ <TypingAnimation className='text-white md:text-lg'>&gt; We perform a detailed technical analysis </TypingAnimation>
+<TypingAnimation className='text-white md:text-lg'>&gt; and provide a free consultation to identify areas for improvement.</TypingAnimation>
+
+
+<TypingAnimation className='text-[#cbcbcb] md:text-lg'>&gt; We begin the process with the design phase.</TypingAnimation>
+
+
+
+     
+
+      <AnimatedSpan className="text-green-500">
+        ✔ System Architecture Design.
+      </AnimatedSpan>
+      <AnimatedSpan className="text-green-500">
+        ✔ Graphic Design.
+      </AnimatedSpan>
+      <AnimatedSpan className="text-green-500">
+        ✔ Web App.
+      </AnimatedSpan>
+
+      <AnimatedSpan className="text-green-500">
+        ✔ SaaS Platform.
+      </AnimatedSpan>
+
+      <AnimatedSpan className="text-green-500">
+        ✔ Android App.
+      </AnimatedSpan>
+
+      <AnimatedSpan className="text-green-500">
+        ✔ iOS App.
+      </AnimatedSpan>
+
+      <AnimatedSpan className="text-green-500">
+        ✔ API.
+      </AnimatedSpan>
+      <AnimatedSpan className="text-green-500">
+        ✔ UI/UX.
+      </AnimatedSpan>
+
+      <AnimatedSpan className="text-green-500">
+        ✔ 3D Design & Visualization.
+      </AnimatedSpan>
+
+      <AnimatedSpan className="text-green-500">
+        ✔ Animation Design.
+      </AnimatedSpan>
+
+
+
+    <TypingAnimation className='text-[#cbcbcb] md:text-lg'>&gt; After finalizing the design, we begin development</TypingAnimation>
+   <TypingAnimation className='text-[#cbcbcb] md:text-lg'>&gt; building the frontend and backend with clean, scalable code</TypingAnimation>
+      <AnimatedSpan className="text-green-500">
+        ✔ Building user interfaces with modern frameworks.
+      </AnimatedSpan>
+      <AnimatedSpan className="text-green-500">
+        ✔ Creating robust APIs, server logic, and databases.
+      </AnimatedSpan>
+      <AnimatedSpan className="text-green-500">
+        ✔ Connecting frontend and backend.
+      </AnimatedSpan>
+      <AnimatedSpan className="text-green-500">
+        ✔ Third-party services, or APIs.
+      </AnimatedSpan>
+            <AnimatedSpan className="text-green-500">
+        ✔ Testing & Quality Assurance.
+      </AnimatedSpan>
+
+<TypingAnimation className='text-[#cbcbcb] md:text-lg'>&gt; We deploy your project and launch it seamlessly on your preferred server.</TypingAnimation>
+<TypingAnimation className='text-[#ccac00] md:text-lg'>&gt; Maintenance & Support</TypingAnimation>
+<TypingAnimation className='text-[#cbcbcb] '>&gt; We provide updates, bug fixes, and ongoing improvements</TypingAnimation>
+<TypingAnimation className='text-[#cbcbcb] '>&gt; to keep your product running smoothly.</TypingAnimation>
+<TypingAnimation className='text-[#ccac00] md:text-lg'>&gt; Performance & Future Growth</TypingAnimation>
+<TypingAnimation className='text-[#cbcbcb] '>&gt; Continuous monitoring and scaling to handle growth and new features.</TypingAnimation>
+   
+     <AnimatedSpan className="text-[#ccac00]">
+        We offer unlimited revisions until you’re completely satisfied.
+      </AnimatedSpan>
+    </Terminal>
+
+</div>
+
+
+
+
+      <div className="mx-auto  bg-[#ccac00]  ring-1 ring-neutral-700/10 dark:bg-neutral-800">
+      
+  <Appscroll/>
+    </div>
+
+
+<FAQAccordion/>
+
+
+   
     </div>
     </>
 
@@ -487,4 +640,57 @@ const testimonials = [
   
    // <div className="relative w-full overflow-clip">
     //  <Timeline data={data} />
+//<ThreeDMarquee images={images} />
   //  </div> 
+
+
+
+  /**
+   *   <div className="flex bg-[#cbcbcb]  w-full items-center justify-center ">
+      <MaskContainer
+        revealText={
+          <p className="mx-16 text-center text-5xl  lg:text-9xl font-bold uppercase text-[#4c0000] dark:text-white">
+            We build with precision, scalability, and performance in mind.
+          </p>
+        }
+        className="h-[40rem] "
+      >
+        We use world-class frameworks to build {" "} 
+        <span className='text-[#4c0000]'>
+          smooth
+          </span>, 
+          <span className='text-[#cbcbcb]'>
+         fast
+          </span>
+          , and 
+         <span className='text-[#000035]'>
+            future-ready platforms
+          </span>
+          .
+        
+      </MaskContainer>
+    </div>
+
+
+
+     <div className="pb-16 flex flex-col antialiased bg-[#cbcbcb] items-center justify-center relative overflow-hidden">
+    <InfiniteMovingCards
+          items={imagess}
+          direction="right"
+          speed="fast"
+          pauseOnHover={true}
+        />
+    </div>
+   */
+
+
+
+
+/***
+ *   <div className="w-full">
+      <Safari
+        url="magicui.design"
+        videoSrc="https://videos.pexels.com/video-files/27180348/12091515_2560_1440_50fps.mp4"
+      />
+    </div>
+ */
