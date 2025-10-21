@@ -5,7 +5,7 @@ import Navbar from "@/components/Navigation/Navbar"
 import FullScreenNav from "@/components/Navigation/FullScreenNav";
 import { NavbarProvider } from "@/context/NavContext";
 import Stairs from "@/components/common/Stairs";
-
+import Footer from '@/components/footer';
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
@@ -39,6 +39,7 @@ export default function RootLayout({
             <Navbar />
             <FullScreenNav />
             {children}
+            <Footer/>
           </Stairs>
         </NavbarProvider>
       </body>

@@ -3,6 +3,7 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import React, { useContext, useEffect, useRef, useState } from 'react'
+import Link from 'next/link'
 import { NavbarContext } from '../../context/NavContext'
 import Image from 'next/image'
 const FullScreenNav = () => {
@@ -134,8 +135,9 @@ const FullScreenNav = () => {
                         </div>
 
                     </div>
-                    <div className='link origin-top relative border-t-1 border-white'>
-                        <h1 className='font-montserrat font-[font2] text-5xl lg:text-[8vw] text-center lg:leading-[0.8] lg:pt-10 pt-3 uppercase'>Projects</h1>
+                    <Link href='/about-us'>   <div className='link origin-top relative border-t-1 border-white'>
+                      <h1 className='font-montserrat font-[font2] text-5xl lg:text-[8vw] text-center lg:leading-[0.8] lg:pt-10 pt-3 uppercase'>About Us</h1>
+                       
                         <div className='moveLink absolute text-[#4c0000] flex top-0 bg-[#ccac00]'>
                             <div className='moveX flex items-center'>
                                 <h2 className='whitespace-nowrap font-[font2] lg:text-[8vw] text-5xl  text-center lg:leading-[0.8] lg:pt-10 pt-4 uppercase'>Web & Mobile Apps</h2>
@@ -151,7 +153,7 @@ const FullScreenNav = () => {
                             </div>
                         </div>
 
-                    </div>
+                    </div></Link>
                     <div className='link origin-top relative border-t-1 border-white'>
                         <h1 className='font-montserrat font-[font2] text-5xl lg:text-[8vw] text-center lg:leading-[0.8] lg:pt-10 pt-3 uppercase'>Blog</h1>
                         <div className='moveLink absolute text-[#4c0000] flex top-0 bg-[#ccac00]'>

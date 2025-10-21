@@ -12,6 +12,7 @@ import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { Timeline } from "@/components/ui/timeline";
 import FAQAccordion from '@/components/faq';
 import Appscroll from '@/components/list';
+
 import { IconCloud } from "@/components/ui/icon-cloud"
 import {
   ScrollVelocityContainer,
@@ -238,8 +239,6 @@ const Page = () => {
 
 <FAQAccordion/>
 
-
-   
     </div>
     </>
 

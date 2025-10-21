@@ -4,6 +4,8 @@ import clsx from "clsx";
 import { HiSpeakerWave } from "react-icons/hi2";
 import { TiLocationArrow } from "react-icons/ti";
 import { GiSoundOn } from "react-icons/gi";
+import { PiDotsThreeOutlineBold } from "react-icons/pi";
+
 
 export default function SoundButton() {
   const [isAudioPlaying, setIsAudioPlaying] = useState(false);
@@ -26,7 +28,7 @@ export default function SoundButton() {
   }, [isAudioPlaying]);
 
   return (
-    <div className="flex items-center cursor-pointer select-none absolute top-32 right-20 z-[9999] pointer-events-auto" onClick={toggleAudioIndicator}>
+    <div className="flex items-center cursor-pointer select-none  pointer-events-auto" onClick={toggleAudioIndicator}>
       <audio
         ref={audioElementRef}
         className="hidden"
@@ -55,7 +57,7 @@ export default function SoundButton() {
         </>
       ) : (
         <span className="text-white text-2xl">
-          <GiSoundOn size={32}/>
+          <PiDotsThreeOutlineBold size={32}/>
         </span>
       )}
     </div>

@@ -74,7 +74,7 @@ const faqData: FAQItem[] = [
   };
 
   return (
-    <div className="min-h-screen bg-[#4c0000] flex justify-center items-center p-5">
+    <div className="min-h-screen bg-[#4c0000] flex justify-center items-center pb-40">
       <div className="max-w-7xl w-full">
         {/* Header */}
 <div className='py-8 lg:py-16'>

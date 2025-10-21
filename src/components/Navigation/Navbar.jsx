@@ -5,6 +5,8 @@
 import React, { useContext, useRef, useEffect, useState } from 'react'
 import { NavbarColorContext, NavbarContext } from '../../context/NavContext'
 import Image from 'next/image'
+import SoundButton from '../sound'
+import Link from 'next/link'
 
 const Navbar = () => {
 
@@ -49,11 +51,13 @@ const Navbar = () => {
       className="lg:w-4 w-4 h-1.5 border-white transition-colors duration-1000"
       style={{ backgroundColor: currentColor }}
     ></div>
-
+<Link href='/about-us'>
   <p className="relative overflow-hidden group cursor-pointer">
-    <span className="relative z-10 px-2 py-1 hover:text-[#4c0000]">Projects</span>
+    <span className="relative z-10 px-2 py-1 hover:text-[#4c0000]">About Us</span>
     <span className="absolute inset-0 bg-[#ccac00] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
   </p>
+</Link>
+
 
 
     <div
@@ -77,6 +81,8 @@ const Navbar = () => {
   </p>
 </div>
 
+<div className='flex gap-4'>
+   <SoundButton />
 <div
   onClick={() => setNavOpen(true)}
   onMouseEnter={() => {
@@ -97,6 +103,8 @@ const Navbar = () => {
     <div className="lg:w-10 w-6 h-0.5 group-hover:bg-white transition-colors duration-300 bg-[#4c0000]"></div>
   </div>
 </div>
+</div>
+ 
 
         </div>
     )
