@@ -352,7 +352,7 @@ const textSections = [
     start: 0, 
     end: 0.2, 
     text: 'About Circle of Nine', 
-    className: 'text-6xl font-extrabold uppercase', 
+    className: 'text-3xl md:text-4xl lg:text-6xl font-extrabold uppercase w-full ', 
     position: 'center' 
   },
   { 
@@ -366,28 +366,28 @@ const textSections = [
     start: 0.4, 
     end: 0.55, 
     text: 'to simplify digital innovation for businesses around the world. With years of hands-on experience in multilingual programming, creative design, and seamless deployment, we provide end-to-end solutions that help brands launch, grow, and thrive online.', 
-    className: 'text-3xl text-start font-bold text-yellow-400 max-w-5xl', 
+    className: 'text-2xl text-start font-bold text-yellow-500 max-w-5xl uppercase', 
     position: 'right' 
   },
   { 
     start: 0.55, 
     end: 0.7, 
     text: 'Our team combines deep technical expertise with a passion for creativity. Whether it’s building complex web applications, developing custom SaaS platforms, or designing stunning user interfaces, we approach every project with precision, scalability, and long-term success in mind.', 
-    className: 'text-3xl font-bold max-w-5xl text-start', 
+    className: 'text-2xl font-bold max-w-5xl text-start w-full uppercase', 
     position: 'center' 
   },
   { 
     start: 0.7, 
     end: 0.85, 
     text: 'What sets us apart is our holistic approach. We don’t just code we analyze, design, develop, test, and deploy using the best technologies and modern frameworks. From frontend to backend, from branding to hosting, Circle of Nine ensures every detail is optimized for performance, security, and user experience.', 
-   className: 'text-3xl font-bold max-w-5xl text-start', 
+   className: 'text-2xl font-bold max-w-5xl text-start uppercase text-yellow-500', 
     position: 'left' 
   },
   { 
     start: 0.85, 
     end: 1, 
     text: 'We believe in collaboration, transparency, and continuous improvement. Every project we take on is a partnership your goals become ours, and we work with you at every stage to bring your vision to life.', 
-   className: 'text-3xl font-bold max-w-5xl text-start', 
+   className: 'text-3xl font-bold max-w-5xl text-start uppercase', 
     position: 'right' 
   },
 ];
@@ -443,7 +443,7 @@ const textSections = [
         {/* Loading indicator */}
         {!modelLoaded && (
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-white text-xl">Loading Space Station...</div>
+            <div className="text-white text-xl">About Circleofnine...</div>
           </div>
         )}
 

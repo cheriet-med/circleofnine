@@ -190,17 +190,19 @@ const media = [
   { type: 'image', src: '/im1.png' },
   { type: 'image', src: '/im2.png' },
   { type: 'image', src: '/im3.png' },
-  { type: 'video', src: '/videos/1.mp4' },
+
   { type: 'video', src: '/videos/2.mp4' },
+  { type: 'video', src: '/videos/section.mp4' },
   { type: 'video', src: '/videos/3.mp4' },
   { type: 'video', src: '/videos/4.mp4' },
-  { type: 'image', src: '/im3.png' },
-  { type: 'image', src: '/im2.png' },
+  { type: 'image', src: '/im5.png' },
+  { type: 'image', src: '/im6.png' },
+    { type: 'image', src: '/im7.png' },
 ];
 
-  const firstColumn = media.slice(0, 3);
-  const secondColumn = media.slice(3, 6);
-  const thirdColumn = media.slice(6, 9);
+  const firstColumn = media.slice(0, 4);
+  const secondColumn = media.slice(4, 7);
+  const thirdColumn = media.slice(7, 10);
 
   const renderMediaItem = (item: { type: 'image' | 'video'; src: string }, index: number) => {
     if (item.type === 'video') {

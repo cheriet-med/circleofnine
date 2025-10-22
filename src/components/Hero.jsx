@@ -100,7 +100,7 @@ const Hero = () => {
   useGSAP(() => {
     gsap.set("#video-frame", {
       clipPath: "polygon(0% 0%, 98% 0%, 100% 100%, 0% 98%)",
-       borderRadius: "0% 0% 0% 0%",
+       borderRadius: "0% 0% 0% 40%",
     });
     gsap.from("#video-frame", {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
@@ -213,7 +213,7 @@ const Hero = () => {
             <TextGenerateEffect words={words3}   delayBetweenLoops={4}/> 
          </div>
 
-  <SoundButton />
+
 
         <div className="absolute left-0 top-0 z-40 size-full">
           <div className="mt-40 px-5 sm:px-10">

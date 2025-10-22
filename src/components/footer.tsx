@@ -50,6 +50,32 @@ const Footer = () => {
 
 
 
+  const words1 = [
+    {
+      text: "Let’s ",
+    },
+    {
+      text: "build",
+    },
+       {
+      text: "something",
+    }
+  ];
+
+
+
+
+  const words2 = [
+    {
+      text: "great",
+      className: "text-[#ccac00] dark:text-[#ccac00]",
+    },
+    
+  ];
+
+
+
+
 
     return (
         <footer className="bg-[#0b0a0a] text-gray-50 ">
@@ -57,16 +83,16 @@ const Footer = () => {
           <div className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
             {/* Contact & Follow Section */}
             <div className="col-span-1 hover:bg-gray-800 p-3">
-             <div className="relative h-24 w-40 ">
-                       <Image
-                         src="/logoo1.png" // or "/logo.webp" if using an webp
-                         alt="logo"
-                         fill
-                         sizes='100%'
-                         style={{ objectFit: 'contain' }} // Maintain aspect ratio
-                         priority // Ensures it loads faster
-                       />
-                     </div>
+           <div className="relative h-12 lg:h-20 w-45 lg:w-60">
+                              <Image
+                                src="/6.png" // or "/logo.webp" if using an webp
+                                alt="logo"
+                                fill
+                                sizes='100%'
+                                style={{ objectFit: 'contain' }} // Maintain aspect ratio
+                                priority // Ensures it loads faster
+                              />
+                            </div>
 
             <div className="py-3">
                <p>Your full-stack partner crafting fast, scalable, <br /> and stunning web solutions that drive growth.</p>
@@ -92,8 +118,8 @@ const Footer = () => {
     <Link href='/'> <p className='hover:text-[#ccac00]'>Home</p></Link>
   <Link href='/about-us'> <p className='hover:text-[#ccac00]'>About Us</p></Link>
            
-           <Link href='/'><p className='hover:text-[#ccac00]'>Blog</p> </Link>  
-         <Link href='/'><p className='hover:text-[#ccac00]'>Contact Us</p></Link>
+           <Link href='/blog'><p className='hover:text-[#ccac00]'>Blog</p> </Link>  
+         <Link href='/contact-us'><p className='hover:text-[#ccac00]'>Contact Us</p></Link>
             </div>
 
 
@@ -119,7 +145,14 @@ const Footer = () => {
           </div>
         <div className="bg-black pb-20 text-gray-400 space-y-8">
             <div className='flex flex-col justify-center items-center space-y-4'>
-                  <TypewriterEffectSmooth words={words} />
+
+               <div className='hidden sm:block'>
+                   <TypewriterEffectSmooth words={words} />
+              </div>
+               <div className='block sm:hidden'>
+                   <TypewriterEffectSmooth words={words1} /> 
+                    <TypewriterEffectSmooth words={words2} />
+               </div>
                   <InteractiveHoverButton>let’s talk</InteractiveHoverButton>
 
             </div>

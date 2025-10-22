@@ -64,7 +64,7 @@ const faqData: FAQItem[] = [
     id: 7,
     question: 'What makes your agency different from others?',
     answer:
-      'We combine technical expertise, creative vision, and genuine collaboration.<br/><br/>Our team doesn’t just build websites—we build solutions that represent your brand, attract your audience, and drive real results.<br/><br/>We listen carefully to your goals, communicate transparently throughout the process, and focus on delivering quality that reflects your values.<br/><br/>Whether it’s a new startup or a large-scale project, we treat every client as a partner and every project as a shared success.'
+      'We combine technical expertise, creative vision, and genuine collaboration.<br/><br/>Our team doesn’t just build websites we build solutions that represent your brand, attract your audience, and drive real results.<br/><br/>We listen carefully to your goals, communicate transparently throughout the process, and focus on delivering quality that reflects your values.<br/><br/>Whether it’s a new startup or a large-scale project, we treat every client as a partner and every project as a shared success.'
   }
 ];
 

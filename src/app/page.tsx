@@ -12,7 +12,7 @@ import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { Timeline } from "@/components/ui/timeline";
 import FAQAccordion from '@/components/faq';
 import Appscroll from '@/components/list';
-
+import CompareHero from '@/components/compare-hero';
 import { IconCloud } from "@/components/ui/icon-cloud"
 import {
   ScrollVelocityContainer,
@@ -82,14 +82,16 @@ const Page = () => {
 
   return (
     <>
-        <main className='bg-[#000035] overflow-x-hidden'>
+        <main className='bg-[#4c0000] overflow-x-hidden'>
 
 
    <Hero />
 
      
     </main>
-    <GlobeDemo />
+   
+<CompareHero/>
+
 <HeroParallax products={products} />
 
 

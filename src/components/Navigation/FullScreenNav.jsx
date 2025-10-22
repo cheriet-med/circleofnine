@@ -97,16 +97,18 @@ const FullScreenNav = () => {
             <div ref={fullNavLinksRef} className='relative'>
                 <div className="navlink flex w-full justify-between lg:p-5 p-2 items-start">
       <div className='flex items-center lg:p-5 p-2'>
-           <div className="relative h-20 lg:h-20 w-40 lg:w-40">
-                              <Image
-                                src="/logoo1.png" // or "/logo.webp" if using an webp
-                                alt="logo"
-                                fill
-                                sizes='100%'
-                                style={{ objectFit: 'contain' }} // Maintain aspect ratio
-                                priority // Ensures it loads faster
-                              />
-                            </div>
+
+            <div className="relative h-12 lg:h-20 w-45 lg:w-60">
+                               <Image
+                                 src="/6.png" // or "/logo.webp" if using an webp
+                                 alt="logo"
+                                 fill
+                                 sizes='100%'
+                                 style={{ objectFit: 'contain' }} // Maintain aspect ratio
+                                 priority // Ensures it loads faster
+                               />
+                             </div>
+
             </div>
                     <div onClick={() => {
                         setNavOpen(false)
@@ -117,6 +119,7 @@ const FullScreenNav = () => {
                     </div>
                 </div>
                 <div className=' pt-32 sm:pt-0 lg:pt-24'>
+                      <Link href='/' onClick={() => setNavOpen(false)}>
                     <div className='link origin-top relative border-t-1 border-white'>
                         <h1 className='font-montserrat font-[font2] text-5xl lg:text-[8vw] text-center lg:leading-[0.8] lg:pt-10 pt-3 uppercase'>Solutions</h1>
                         <div className='moveLink absolute text-[#4c0000] flex top-0 bg-[#ccac00]'>
@@ -134,8 +137,9 @@ const FullScreenNav = () => {
                             </div>
                         </div>
 
-                    </div>
-                    <Link href='/about-us'>   <div className='link origin-top relative border-t-1 border-white'>
+                    </div></Link>
+                    <Link href='/about-us' onClick={() => setNavOpen(false)}>   
+                    <div className='link origin-top relative border-t-1 border-white'>
                       <h1 className='font-montserrat font-[font2] text-5xl lg:text-[8vw] text-center lg:leading-[0.8] lg:pt-10 pt-3 uppercase'>About Us</h1>
                        
                         <div className='moveLink absolute text-[#4c0000] flex top-0 bg-[#ccac00]'>
@@ -153,7 +157,9 @@ const FullScreenNav = () => {
                             </div>
                         </div>
 
-                    </div></Link>
+                    </div>
+                    </Link>
+                    <Link href='/blog' onClick={() => setNavOpen(false)}>
                     <div className='link origin-top relative border-t-1 border-white'>
                         <h1 className='font-montserrat font-[font2] text-5xl lg:text-[8vw] text-center lg:leading-[0.8] lg:pt-10 pt-3 uppercase'>Blog</h1>
                         <div className='moveLink absolute text-[#4c0000] flex top-0 bg-[#ccac00]'>
@@ -171,7 +177,8 @@ const FullScreenNav = () => {
                             </div>
                         </div>
 
-                    </div>
+                    </div></Link>  
+                    <Link href='/contact-us' onClick={() => setNavOpen(false)}>
                     <div className='link origin-top relative border-y-1 border-white'>
                         <h1 className='font-montserrat font-[font2] text-5xl lg:text-[8vw] text-center lg:leading-[0.8] lg:pt-10 pt-3 uppercase'>Book a call</h1>
                         <div className='moveLink absolute text-[#4c0000] flex top-0 bg-[#ccac00]'>
@@ -189,7 +196,8 @@ const FullScreenNav = () => {
                             </div>
                         </div>
 
-                    </div>
+                    </div>  
+                    </Link>
                 </div>
             </div>
         </div>

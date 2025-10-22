@@ -31,22 +31,25 @@ const Navbar = () => {
     return (
     <div className='z-40 flex items-center fixed top-0 w-full justify-between px-4 lg:px-8 py-3'>
       <div className='flex items-center lg:p-5 p-2'>
-           <div className="relative h-12 lg:h-20 w-32 lg:w-40">
+        <Link href='/'>
+           <div className="relative h-12 lg:h-20 w-45 lg:w-60">
                               <Image
-                                src="/logoo1.png" // or "/logo.webp" if using an webp
+                                src="/6.png" // or "/logo.webp" if using an webp
                                 alt="logo"
                                 fill
                                 sizes='100%'
                                 style={{ objectFit: 'contain' }} // Maintain aspect ratio
                                 priority // Ensures it loads faster
                               />
-                            </div>
+                            </div></Link>
             </div>
 <div className="hidden lg:flex gap-8 items-center justify-center h-full font-semibold text-white">
+  <Link href='/'>
   <p className="relative overflow-hidden group cursor-pointer">
     <span className="relative z-10 px-2 py-1 hover:text-[#4c0000]">Solutions</span>
     <span className="absolute inset-0 bg-[#ccac00]  translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
   </p>
+  </Link>
     <div
       className="lg:w-4 w-4 h-1.5 border-white transition-colors duration-1000"
       style={{ backgroundColor: currentColor }}
@@ -64,21 +67,22 @@ const Navbar = () => {
       className="lg:w-4 w-4 h-1.5 border-white transition-colors duration-1000"
       style={{ backgroundColor: currentColor }}
     ></div>
-
+<Link href='/blog'>
   <p className="relative overflow-hidden group cursor-pointer">
     <span className="relative z-10 px-2 py-1 hover:text-[#4c0000]">Blog</span>
     <span className="absolute inset-0 bg-[#ccac00] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
   </p>
-
+</Link>
     <div
       className="lg:w-4 w-4 h-1.5 border-white transition-colors duration-1000"
       style={{ backgroundColor: currentColor }}
     ></div>
 
+<Link href='/contact-us'>
   <p className="relative overflow-hidden group cursor-pointer">
     <span className="relative z-10 px-2 py-1 hover:text-[#4c0000]">Book a call</span>
     <span className="absolute inset-0 bg-[#ccac00] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
-  </p>
+  </p></Link>
 </div>
 
 <div className='flex gap-4'>
@@ -91,7 +95,7 @@ const Navbar = () => {
   onMouseLeave={() => {
     navGreenRef.current.style.height = '0%';
   }}
-  className="group lg:h-16 h-10  bg-[#ccac00] cursor-pointer opacity-70 relative lg:w-[16vw] w-48"
+  className="group lg:h-16 h-10  bg-[#ccac00] cursor-pointer opacity-70 relative lg:w-[16vw] w-32"
 >
   <div
     ref={navGreenRef}
